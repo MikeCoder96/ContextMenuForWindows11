@@ -1,21 +1,24 @@
-# Custom Context Menu
+# Notepad++ Context Menu
 
- Add Custom Context Menu For Windows11
-
-
-<img src="https://raw.githubusercontent.com/ikas-mc/ContextMenuForWindows11/main/screenshots/menu.png" width=500 >
+This is a fork of Custom Context Menu edited only for Notepad++ For Windows 11 new context menu
 
 
-##  Download
+![image](https://user-images.githubusercontent.com/50410305/169687719-dec79f7b-73ac-47ab-a547-8f03a9bffe63.png)
 
-Windows store|Github release
------------- | -------------
-<a href="https://www.microsoft.com/en-us/p/custom-context-menu/9pc7bzz28g0x">Windows store </a> <a href="https://apps.microsoft.com/store/detail/custom-context-menu/9PC7BZZ28G0X">Windows store (new)</a>|<a href="https://github.com/ikas-mc/ContextMenuForWindows11/releases">Github release </a>
-ms-windows-store://pdp/?ProductId=9PC7BZZ28G0X|use self-signed certificate,not recommended
+##  What works
+- Context menu on folder will open all files inside
+- Multiple files opening from context menu "Multiple file selection"
+- If the exe path is empty, context menu command will not be shown
 
+##  Setup
+- Open the app
+- Set path of notepad++.exe
+- Save and reload cache
 
+##  How To
 
-
+Clone this repo, build from Visual Studio.
+Follow steps from ikas-mc down there.
 
 ##  Guides
 https://github.com/ikas-mc/ContextMenuForWindows11/wiki
