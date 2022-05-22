@@ -1,5 +1,6 @@
 #include "pch.h"
 #include "BaseExplorerCommand.h"
+#include <Shlwapi.h>
 
 
 const EXPCMDFLAGS BaseExplorerCommand::Flags() { return ECF_DEFAULT; }
@@ -8,7 +9,7 @@ const  wchar_t* BaseExplorerCommand::GetIconId() { return L",-101"; }
 IFACEMETHODIMP BaseExplorerCommand::GetTitle(_In_opt_ IShellItemArray* items, _Outptr_result_nullonfailure_ PWSTR* name)
 {
 	*name = nullptr;
-	return SHStrDupW(L"Open With", name);
+	return SHStrDupW(L"Open With Notepad++", name);
 }
 
 IFACEMETHODIMP BaseExplorerCommand::GetIcon(_In_opt_ IShellItemArray* items, _Outptr_result_nullonfailure_ PWSTR* icon)

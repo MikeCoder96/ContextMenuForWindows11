@@ -98,14 +98,7 @@ namespace ContextMenuCustomApp.View.Menu
                 {
                     SuggestedStartLocation = PickerLocationId.ComputerFolder
                 };
-                fileOpenPicker.FileTypeFilter.Add(".com");
                 fileOpenPicker.FileTypeFilter.Add(".exe");
-                fileOpenPicker.FileTypeFilter.Add(".bat");
-                fileOpenPicker.FileTypeFilter.Add(".cmd");
-                fileOpenPicker.FileTypeFilter.Add(".vbs");
-                fileOpenPicker.FileTypeFilter.Add(".vbe");
-                fileOpenPicker.FileTypeFilter.Add(".js");
-                fileOpenPicker.FileTypeFilter.Add(".jse");
                 var file = await fileOpenPicker.PickSingleFileAsync();
                 if (null != file)
                 {

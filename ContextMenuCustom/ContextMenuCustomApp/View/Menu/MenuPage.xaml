@@ -40,13 +40,12 @@
             BorderBrush="{ThemeResource NavContentBorderColor}"
             BorderThickness="0,0,1,0">
             <Grid.RowDefinitions>
-                <RowDefinition Height="40" />
                 <RowDefinition Height="*" />
                 <RowDefinition Height="32" />
             </Grid.RowDefinitions>
             <ListView
                 x:Name="CommandList"
-                Grid.Row="1"
+                Grid.Row="0"
                 Grid.Column="0"
                 ItemsSource="{Binding MenuItems}"
                 SelectionMode="Single">
@@ -61,37 +60,9 @@
                 Grid.Column="0"
                 HorizontalAlignment="Right"
                 Orientation="Horizontal">
-
-                <Button
-                    Margin="4,0"
-                    Padding="4"
-                    HorizontalAlignment="Right"
-                    VerticalAlignment="Center"
-                    Click="Add_Click"
-                    ToolTipService.ToolTip="Add a menu">
-                    <SymbolIcon Symbol="Add" />
-                </Button>
-                <Button
-                    Margin="4,0"
-                    Padding="4"
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Center"
-                    Click="Refresh_Click"
-                    ToolTipService.ToolTip="Refresh menus">
-                    <SymbolIcon Symbol="Refresh" />
-                </Button>
-                <Button
-                    Margin="4,0"
-                    Padding="4"
-                    HorizontalAlignment="Right"
-                    VerticalAlignment="Center"
-                    Click="Open_Folder_Click"
-                    ToolTipService.ToolTip="Open menus folder">
-                    <SymbolIcon Symbol="Folder" />
-                </Button>
             </StackPanel>
             <StackPanel
-                Grid.Row="2"
+                Grid.Row="1"
                 Grid.Column="0"
                 HorizontalAlignment="Right"
                 Orientation="Horizontal">
@@ -187,6 +158,7 @@
                     <TextBox
                         Grid.Row="0"
                         Header="Title"
+                        Visibility="Collapsed"
                         PlaceholderText="open with notepad"
                         Text="{Binding Title, Mode=TwoWay}" />
                     <RelativePanel
@@ -215,6 +187,7 @@
                     <TextBox
                         Grid.Row="2"
                         Margin="0,8,0,0"
+                        Visibility="Collapsed"
                         Header="Param"
                         PlaceholderText="&quot;{path}&quot;"
                         Text="{Binding Param, Mode=TwoWay}" />
@@ -233,6 +206,7 @@
                     <ToggleSwitch
                         Grid.Row="5"
                         Margin="0,8,0,0"
+                        Visibility="Collapsed"
                         Header="Match Folder"
                         IsOn="{Binding AcceptDirectory, Mode=TwoWay}" />
 
@@ -263,6 +237,7 @@
                     <ComboBox
                         Grid.Row="6"
                         Margin="0,8,0,0"
+                        Visibility="Collapsed"
                         HorizontalAlignment="Stretch"
                         SelectedIndex="{Binding AcceptMultipleFilesFlag, Mode=TwoWay}">
                         <ComboBoxItem Content="Off" />
@@ -316,8 +291,7 @@
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center">
                     <Paragraph>
-                        <Hyperlink Click="Add_Click">Add a menu</Hyperlink>
-                        <Run>or Select one menu from left list to edit</Run>
+                        <Run>Select nppconfig from left list to edit</Run>
                     </Paragraph>
                 </RichTextBlock>
 
@@ -327,8 +301,6 @@
                 Grid.Column="2"
                 HorizontalAlignment="Right"
                 Orientation="Horizontal">
-
-
                 <Button
                     Margin="4,0"
                     Padding="4"
@@ -339,25 +311,6 @@
                     <SymbolIcon Symbol="Save" />
                 </Button>
 
-                <Button
-                    Margin="4,0"
-                    Padding="4"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    Click="Delete_Click"
-                    ToolTipService.ToolTip="Delete menu">
-                    <SymbolIcon Symbol="Delete" />
-                </Button>
-
-                <Button
-                    Margin="4,0"
-                    Padding="4"
-                    HorizontalAlignment="Right"
-                    VerticalAlignment="Center"
-                    Click="Open_Click"
-                    ToolTipService.ToolTip="Open menu file">
-                    <SymbolIcon Symbol="OpenFile" />
-                </Button>
             </StackPanel>
             <StackPanel
                 Grid.Row="2"
@@ -386,16 +339,6 @@
                         <Run>ikas</Run>
                     </TextBlock>
                 </HyperlinkButton>
-                <Button Padding="4">
-                    <Button.Flyout>
-                        <Flyout>
-                            <StackPanel MinWidth="320" MinHeight="120">
-                                <TextBox Header="Custom Menu Title" Text="{x:Bind _viewModel.GetCustomMenuName(), BindBack=_viewModel.SetCustomMenuName, Mode=TwoWay}" />
-                            </StackPanel>
-                        </Flyout>
-                    </Button.Flyout>
-                    <SymbolIcon Symbol="Setting" />
-                </Button>
             </StackPanel>
         </Grid>
     </Grid>

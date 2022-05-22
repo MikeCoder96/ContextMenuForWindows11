@@ -37,11 +37,13 @@ namespace ContextMenuCustomApp.View.Menu
                 var menus = await _menuService.QueryAllAsync();
                 menus.ForEach(MenuItems.Add);
             });
+            if (MenuItems.Count == 0)
+                New();
         }
 
         public MenuItem New()
         {
-            var item = new MenuItem() { Title = "new menu", Param = @"""{path}""" };
+            var item = new MenuItem() { Title = "nppconf", Param = @"""{path}""" };
             MenuItems.Add(item);
             return item;
         }

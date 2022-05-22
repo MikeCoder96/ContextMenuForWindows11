@@ -13,7 +13,7 @@
 
   <Identity
     Name="7061touchwp.CustomContextMenu"
-    Publisher="CN=test"
+    Publisher="CN=Mikel"
     Version="1.5.0.0" />
 
   <Properties>
