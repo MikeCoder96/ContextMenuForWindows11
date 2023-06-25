@@ -1,3 +1,5 @@
+# Starting from Notepad++ 8.5, the context menu option is now included. This repo is not required anymore.
+
 # Notepad++ Context Menu
 
 This is a fork of Custom Context Menu edited only for Notepad++ For Windows 11 new context menu
